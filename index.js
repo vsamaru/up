@@ -1,7 +1,7 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
 // import '6cc'
 // import './handler'
-import { render } from 'posthtml-render'
+const { render }  = require('posthtml-render')
 // import { bot } from '../bot'
 
 
