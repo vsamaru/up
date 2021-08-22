@@ -1,0 +1,20 @@
+/target
+/dist
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+worker/
+node_modules/
+.cargo-ok
+wrangler.toml
+.DS_Store
+haters/
+echo "# clo" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/vsamaru/clo.git
+git push -u origin main
