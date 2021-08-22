@@ -56,7 +56,7 @@ const Router = (o = {}) =>
 // now let's create a router (note the lack of "new")
 const router = Router()
 // GET collection index
-router.get('/x', async re =>  {
+router.get('/x/:x', async re =>  {
      return new Response(
      JSON.stringify(re, null, 4), {
         headers: {
