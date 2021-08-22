@@ -1,8 +1,10 @@
 {
-
   "main": "index.js",
   "scripts": {
     "g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
     "dev": "wrangler dev"
+  },
+  "dependencies": {
+    "posthtml-render": "^3.0.0"
   }
 }
