@@ -1,5 +1,5 @@
 name = "clo"
-type = "javascript"
+type = "webpack"
 workers_dev = true
 
 
