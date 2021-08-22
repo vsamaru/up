@@ -1,0 +1,5 @@
+name = "clo"
+type = "javascript"
+workers_dev = true
+vars = { ENVIRONMENT = "prod", CLOUD_NAME = "o6" }
+
