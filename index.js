@@ -1,5 +1,5 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-// import '6cc'
+import './6cc'
 // import './handler'
 import { render } from 'posthtml-render'
 // import { bot } from '../bot'
@@ -56,7 +56,15 @@ const Router = (o = {}) =>
 // now let's create a router (note the lack of "new")
 const router = Router()
 // GET collection index
-
+router.get('/x', async re =>  {
+     return new Response(
+     JSON.stringify(re, null, 4), {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
+    }
+    )
+})
 router.get('/:x', async ({ params }) =>  {
 
     //var h = ``
