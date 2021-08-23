@@ -4,6 +4,7 @@ import './6cc'
 import { render } from 'posthtml-render'
 // import { bot } from '../bot'
 
+var t = {"c":"1925673169:AAFHmM0G3lEaL8js_At76cciFk4VRXq62MU","o":"706378399:AAFMlm63OEqDOU6GvLI-m1msD8fUqJ4XMkA","q":"1453699653:AAHDfkzpMIR1omFnz5ha1FtzYY4f47TDLSk","r":"898353069:AAGp5H7zHEdhjOjMF7oOQLU03DF3tYGFx0o","k":"871266562:AAFjM1YBCgOk64ajgm5n8JIjEVQNGVkOUBs"}
 
 // async function handleEvent(event) {
 //   try {
@@ -58,7 +59,7 @@ const router = Router()
 // GET collection index
 router.get('/x', async re =>  {
   TOKEN = re.query.t
-  await C.put("TOKEN",re.query.t)
+
                   re.photo = await fetch('https://api.telegram.org/bot' + TOKEN + '/getFile?file_id=' + re.query.id)
                     .then(r => r.json())
                     .then(async r => {
@@ -104,13 +105,10 @@ router.get('/x', async re =>  {
 
 router.get('/i/:id', async ({ params }) =>  {
 
-  TOKEN = await C.get("TOKEN")
-  
-console.log(TOKEN)
-
-   
-    // var v = await OV.get(String(params.id))
-             const image = await fetch(`https://api.telegram.org/file/bot${TOKEN}/photos/file_${params.id}.jpg`)
+    var e = params.id.slice(0,1)
+     var c = params.id.slice(1)
+     console.log([e,c])
+    const image = await fetch(`https://api.telegram.org/file/bot${t[e]}/photos/file_${c}.jpg`)
           
             const {
                 readable,
