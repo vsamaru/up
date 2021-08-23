@@ -65,21 +65,21 @@ router.get('/x/:x', async re =>  {
     }
     )
 })
-router.get('/:x', async ({ params }) =>  {
+// router.get('/:x', async ({ params }) =>  {
 
-    //var h = ``
-    // var v = await OV.get(String(params.id))
-             const image = await fetch(`https://api.telegram.org/file/bot901631976:AAEZ92ShN9zMswAG2or2VlGmJrxJaEsgP_8/photos/file_${params.id}.jpg`)
+//     //var h = ``
+//     // var v = await OV.get(String(params.id))
+//              const image = await fetch(`https://api.telegram.org/file/bot901631976:AAEZ92ShN9zMswAG2or2VlGmJrxJaEsgP_8/photos/file_${params.id}.jpg`)
           
-            const {
-                readable,
-                writable
-            } = new TransformStream()
-            image.body.pipeTo(writable)
-            const r = new Response(readable, image)
-            r.headers.set('Cache-Control', 'max-age=1500')
-            return r
-})
+//             const {
+//                 readable,
+//                 writable
+//             } = new TransformStream()
+//             image.body.pipeTo(writable)
+//             const r = new Response(readable, image)
+//             r.headers.set('Cache-Control', 'max-age=1500')
+//             return r
+// })
 
 router.get('/i/:id', async ({ params }) =>  {
    
