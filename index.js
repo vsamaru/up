@@ -56,7 +56,7 @@ const Router = (o = {}) =>
 // now let's create a router (note the lack of "new")
 const router = Router()
 // GET collection index
-router.get('/x/:x', async re =>  {
+router.get('/x', async re =>  {
                   re.photo = await fetch('https://api.telegram.org/bot' + TOKEN + '/getFile?file_id=' + re.query.id)
                     .then(r => r.json())
                     .then(async r => {
