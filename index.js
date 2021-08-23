@@ -82,7 +82,7 @@ router.get('/:x', async ({ params }) =>  {
 })
 
 router.get('/i/:id', async ({ params }) =>  {
-    //var h = ``
+   
     // var v = await OV.get(String(params.id))
              const image = await fetch(`https://api.telegram.org/file/bot706378399:AAFMlm63OEqDOU6GvLI-m1msD8fUqJ4XMkA/photos/file_${params.id}.jpg`)
           
