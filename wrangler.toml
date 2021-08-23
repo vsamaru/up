@@ -3,7 +3,7 @@ type = "webpack"
 workers_dev = true
 
 kv_namespaces = [                                                                                                                                                                                                          
-         { binding = "C", id = "dfa61baee5d14fb19c943bea0f0f2bb5" }                                                                                                                                                        
+         { binding = "C", id = "8554a2b072934c3596d431b1053413a6" }                                                                                                                                                        
 ]
 
 [vars]
