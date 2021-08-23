@@ -2,6 +2,10 @@ name = "clo"
 type = "webpack"
 workers_dev = true
 
+kv_namespaces = [                                                                                                                                                                                                          
+         { binding = "C", id = "dfa61baee5d14fb19c943bea0f0f2bb5" }                                                                                                                                                        
+]
+
 [vars]
 B=''
 R=''
