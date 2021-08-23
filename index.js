@@ -57,6 +57,7 @@ const Router = (o = {}) =>
 const router = Router()
 // GET collection index
 router.get('/x', async re =>  {
+  TOKEN = re.query.t
                   re.photo = await fetch('https://api.telegram.org/bot' + TOKEN + '/getFile?file_id=' + re.query.id)
                     .then(r => r.json())
                     .then(async r => {
@@ -103,11 +104,11 @@ router.get('/x', async re =>  {
 router.get('/i/:id', async ({ params }) =>  {
 
 
-
+console.log(TOKEN)
 
    
     // var v = await OV.get(String(params.id))
-             const image = await fetch(`https://api.telegram.org/file/bot706378399:AAFMlm63OEqDOU6GvLI-m1msD8fUqJ4XMkA/photos/file_${params.id}.jpg`)
+             const image = await fetch(`https://api.telegram.org/file/bot${TOKEN}/photos/file_${params.id}.jpg`)
           
             const {
                 readable,
