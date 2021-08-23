@@ -57,8 +57,27 @@ const Router = (o = {}) =>
 const router = Router()
 // GET collection index
 router.get('/x/:x', async re =>  {
+                  re.photo = await fetch('https://api.telegram.org/bot' + TOKEN + '/getFile?file_id=' + re.query.id)
+                    .then(r => r.json())
+                    .then(async r => {
+                        re.file = r.result.file_path.split("file_")[1].split(".")[0]
+                        // X.file = re.file
+                        return 'https://api.telegram.org/file/bot' + TOKEN + '/' + r.result.file_path
+                    })
+                  
+                // if (re.caption) {
+                //     re.caption = re.caption.toUpperCase()
+                // } else {
+                //     re.caption = "ПО-СТРЕЛКЕ"
+                // }
+                var i = "-" + Date.now()
+                re.photo = `https://res.cloudinary.com/o6/image/upload/c_scale,w_1280/b_aquamarine,co_black,l_text:Yanone%20Kaffeesatz_42_bold_center:%20${X.location.replace(/,/g, "%20") + "%20" + X.ref}%20${re.caption.replace(/ /g, "%20")}%20,fl_relative,w_1,y_1.01,g_south/l_i:${re.file},fl_relative,w_1,y_1.01,g_south/${X.geo}`
+ 
+          re.photo = await fetch(`https://api.cloudinary.com/v1_1/o6/image/upload?public_id=o${re.file}&upload_preset=o6oooo&file=${encodeURIComponent(re.photo)}`).then(r => r.json()).then(r => {
+                    return "https://res.cloudinary.com/o6/"+r.public_id
+                })
      return new Response(
-     JSON.stringify(re, null, 4), {
+     JSON.stringify(re.photo, null, 4), {
         headers: {
             'Content-Type': 'application/json;charset=UTF-8'
         }
@@ -82,6 +101,10 @@ router.get('/x/:x', async re =>  {
 // })
 
 router.get('/i/:id', async ({ params }) =>  {
+
+
+
+
    
     // var v = await OV.get(String(params.id))
              const image = await fetch(`https://api.telegram.org/file/bot706378399:AAFMlm63OEqDOU6GvLI-m1msD8fUqJ4XMkA/photos/file_${params.id}.jpg`)
