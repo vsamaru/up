@@ -107,7 +107,7 @@ router.get('/i/:id', async ({ params }) =>  {
 
     var e = params.id.slice(0,1)
      var c = params.id.slice(1)
-     console.log([e,c])
+    
     const image = await fetch(`https://api.telegram.org/file/bot${t[e]}/photos/file_${c}.jpg`)
           
             const {
