@@ -76,11 +76,7 @@ router.get('/x', async re =>  {
                 var i = "-" + Date.now()
                 re.photo = `https://res.cloudinary.com/o6/image/upload/c_scale,w_1280/b_${re.query.cc},co_black,l_text:Yanone%20Kaffeesatz_42_bold_center:%20${re.query.ll.replace(/,/g, "%20") + "%20" + re.query.ref}%20${re.query.cap.replace(/ /g, "%20")}%20,fl_relative,w_1,y_1.01,g_south/l_i:${re.query.n}${re.file},fl_relative,w_1,y_1.01,g_south/${re.query.geo}`
  
-          re.photo = await fetch(`https://api.cloudinary.com/v1_1/o6/image/upload?overwrite=true&public_id=${re.query.n}${re.file}&upload_preset=o6oooo&file=${encodeURIComponent(re.photo)}`, {
-            headers: {
-                'Authorization': 'Basic MTUxMTM0NDk1MTUzMTg0OkJuV0RGYmFUbkljeGtHbVRTZDF3NW5SYnNNaw=='
-            }
-        }).then(r => r.json()).then(r => {
+          re.photo = await fetch(`https://api.cloudinary.com/v1_1/o6/image/upload?public_id=${re.query.n}${re.file}&upload_preset=o6oooo&file=${encodeURIComponent(re.photo)}`).then(r => r.json()).then(r => {
                     return "https://res.cloudinary.com/o6/"+r.public_id
                 })
      return new Response(
