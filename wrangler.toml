@@ -2,9 +2,9 @@ name = "clo"
 type = "webpack"
 workers_dev = true
 
-kv_namespaces = [                                                                                                                                                                                                          
-         { binding = "C", id = "8554a2b072934c3596d431b1053413a6" }                                                                                                                                                        
-]
+# kv_namespaces = [                                                                                                                                                                                                          
+#          { binding = "C", id = "8554a2b072934c3596d431b1053413a6" }                                                                                                                                                        
+# ]
 
 [vars]
 B=''
