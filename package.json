@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "scripts": {
-  		"t": "nodemon -r esm test.js",
+  	"t": "nodemon -r esm test.js",
     "g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
     "w": "wrangler publish"
   },
