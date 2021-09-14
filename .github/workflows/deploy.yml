@@ -23,6 +23,6 @@ jobs:
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
-          apiToken: LUMyVByAnFL5BPyOZxINso9rvC5czG5us8rnUROk
+          apiToken: ${{ secrets.CF_API_TOKEN }}
         env:
-          CF_ACCOUNT_ID: 691a3156e374317f2c626559557a6f12
+          CF_ACCOUNT_ID: ${{secrets.CF_ACCOUNT_ID}}
