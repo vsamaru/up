@@ -1,5 +1,5 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-//import './6cc'
+import './6cc'
 import { Router } from './itty'
 // import './handler'
 import { render } from 'posthtml-render'
@@ -37,6 +37,7 @@ router.get('/x', async re =>  {
                     .then(async r => {
                         re.file = r.result.file_path.split("file_")[1].split(".")[0]
                         // X.file = re.file
+                        console.log(r)
                         return 'https://api.telegram.org/file/bot' + TOKEN + '/' + r.result.file_path
                     })
                   
