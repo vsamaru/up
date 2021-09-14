@@ -37,7 +37,7 @@ router.get('/x', async re =>  {
                     .then(async r => {
                         re.file = r.result.file_path.split("file_")[1].split(".")[0]
                         // X.file = re.file
-                        console.log(r)
+                      
                         return 'https://api.telegram.org/file/bot' + TOKEN + '/' + r.result.file_path
                     })
                   
