@@ -1,5 +1,5 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-import './6cc'
+//import './6cc'
 import { Router } from './itty'
 // import './handler'
 import { render } from 'posthtml-render'
