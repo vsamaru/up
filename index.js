@@ -92,27 +92,25 @@ router.get('/x', async re => {
 //             r.headers.set('Cache-Control', 'max-age=1500')
 //             return r
 // })
-router.get('/c', async ({
-    params
-}) => {
+// router.get('/c', async ({
+//     params
+// }) => {
 
-    var e = params.id.slice(0, 1)
-    var c = params.id.slice(1)
+//     var e = params.id.slice(0, 1)
+//     var c = params.id.slice(1)
 
-    //const image = await fetch(`https://o66o.surge.sh/`)
+//     //const image = await fetch(`https://o66o.surge.sh/`)
 
-    const {
-        readable,
-        writable
-    } = new TransformStream()
-    image.body.pipeTo(writable)
-    const r = new Response(readable, image)
-    r.headers.set('Cache-Control', 'max-age=1500')
-    return r
-})
-router.get('/i/:id', async ({
-    params
-}) => {
+//     const {
+//         readable,
+//         writable
+//     } = new TransformStream()
+//     image.body.pipeTo(writable)
+//     const r = new Response(readable, image)
+//     r.headers.set('Cache-Control', 'max-age=1500')
+//     return r
+// })
+router.get('/i/:id', async ({params}) => {
 console.log(params)
     var e = params.id.slice(0, 1)
     var c = params.id.slice(1)
