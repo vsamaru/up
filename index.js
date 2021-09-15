@@ -99,7 +99,7 @@ router.get('/c', async ({
     var e = params.id.slice(0, 1)
     var c = params.id.slice(1)
 
-    const image = await fetch(`https://o66o.surge.sh/`)
+    //const image = await fetch(`https://o66o.surge.sh/`)
 
     const {
         readable,
@@ -113,7 +113,7 @@ router.get('/c', async ({
 router.get('/i/:id', async ({
     params
 }) => {
-
+console.log(params)
     var e = params.id.slice(0, 1)
     var c = params.id.slice(1)
 
