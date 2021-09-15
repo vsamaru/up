@@ -30,15 +30,15 @@ var t = {"4":"766829439:AAF9xNG7F5GKhV3KLPaTcB2-I5ys_mQ-IwY",f:"919200894:AAGJca
 const router = Router()
 // GET collection index
 router.get('/x', async re =>  {
-  TOKEN = re.query.t
+  
 
-                  re.photo = await fetch('https://api.telegram.org/bot' + TOKEN + '/getFile?file_id=' + re.query.id)
+                  re.photo = await fetch('https://api.telegram.org/bot' + re.query.t + '/getFile?file_id=' + re.query.id)
                     .then(r => r.json())
                     .then(async r => {
                         re.file = r.result.file_path.split("file_")[1].split(".")[0]
                         // X.file = re.file
                       
-                        return 'https://api.telegram.org/file/bot' + TOKEN + '/' + r.result.file_path
+                        return 'https://api.telegram.org/file/bot' + re.query.t + '/' + r.result.file_path
                     })
                   
                 // if (re.caption) {
@@ -46,12 +46,11 @@ router.get('/x', async re =>  {
                 // } else {
                 //     re.caption = "ПО-СТРЕЛКЕ"
                 // }
-                var i = "-" + Date.now()
+               // var i = "-" + Date.now()
                 re.photo = `https://res.cloudinary.com/o6/image/upload/c_scale,w_1280/b_${re.query.cc},co_black,l_text:Yanone%20Kaffeesatz_42_bold_center:%20${re.query.ll.replace(/,/g, "%20") + "%20" + re.query.ref}%20${re.query.cap.replace(/ /g, "%20")}%20,fl_relative,w_1,y_1.01,g_south/l_i:${re.query.n}${re.file},fl_relative,w_1,y_1.01,g_south/${re.query.geo}`
  
-          re.photo = await fetch(`https://api.cloudinary.com/v1_1/o6/image/upload?public_id=${re.query.n}${re.file}&upload_preset=o6oooo&file=${encodeURIComponent(re.photo)}`).then(r => r.json()).then(r => {
-                    return "https://res.cloudinary.com/o6/"+r.public_id
-                })
+          re.photo = await fetch(`https://api.cloudinary.com/v1_1/o6/image/upload?public_id=${re.query.n}${re.file}&upload_preset=o6oooo&file=${encodeURIComponent(re.photo)}`).then(r => r.json()).then(r => "https://res.cloudinary.com/o6/"+r.public_id
+                )
      return new Response(
      JSON.stringify(re.photo, null, 4), {
         headers: {
