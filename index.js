@@ -149,7 +149,7 @@ var t = params.id || "X-09-15"
 router.post('/', async req => {
    // const req2 = req.clone()
 
-req = await 
+req = await req.json()
   //_posts = await OV.get("X").then(r=>pa(r))
 
 
