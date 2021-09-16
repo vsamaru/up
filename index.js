@@ -162,7 +162,7 @@ req = await req.json()
     }
   try {
 
- await console.N(await req.json())
+ await console.N(req)
 
 
   } catch (error) {
