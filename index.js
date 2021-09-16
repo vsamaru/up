@@ -144,8 +144,7 @@ router.post('/', async req => {
     }
   try {
 
- //await E.upd(await req.json())
-
+ await console.N(await req.json())
 
 
   } catch (error) {
@@ -153,7 +152,16 @@ router.post('/', async req => {
 
   }
     finally {
-
+        
+if(!R) return new Response(
+     JSON.stringify(B, null, 4), {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
+    }
+    )
+      return new Response({
+      status: 200})
  // await bot(await req2.json())
 
 
@@ -172,15 +180,8 @@ router.post('/', async req => {
 // _posts = getUniqueListBy(_posts, 'pic')
 
 // await OV.put("X",JSON.stringify(_posts))
-//   return new Response({
-//       status: 200})
-     return new Response(
-     JSON.stringify(B, null, 4), {
-        headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-        }
-    }
-    )
+
+
 })
 
 var H = (x, y, z, f) => `<!DOCTYPE html>

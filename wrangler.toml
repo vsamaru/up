@@ -4,9 +4,10 @@ workers_dev = true
 
 [vars]
 B=''
-R=''
+R=465081843
 X=''
 O=''
+U=''
 TOKEN="1352165270:AAG0zzbAmKrMqnmCL6YV5QaYh2xoeFJKVAw"
 
 [[kv_namespaces]]
