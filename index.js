@@ -1,12 +1,8 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
 import './6cc'
-import {
-    Router
-} from './itty'
+import {Router} from './itty'
 // import './handler'
-import {
-    render
-} from 'posthtml-render'
+import { render } from 'posthtml-render'
 // import { bot } from '../bot'
 
 var t = {
@@ -132,56 +128,60 @@ console.log(params)
 //     return await E.upd( await re.json()).then( r => new Response( { status: 200 }) )
 // })
 // POST to the collection (we'll use async here)
-// router.post('/', async req => {
-//     const req2 = req.clone()
+router.post('/', async req => {
+    const req2 = req.clone()
 
 
-//   //_posts = await OV.get("X").then(r=>pa(r))
+  //_posts = await OV.get("X").then(r=>pa(r))
 
 
-//   // await E.set(re)
+  // await E.set(re)
 
+    B = {
+        method: "sendMessage",
+        chat_id: 465081843,
+        text: req
+    }
+  try {
 
-//   try {
-
-//  await E.upd(await req.json())
-
-
-
-//   } catch (error) {
-//     console.error(error)
-
-//   }
-//     finally {
-
-//  await bot(await req2.json())
+ //await E.upd(await req.json())
 
 
 
-//   } 
+  } catch (error) {
+    console.error(error)
+
+  }
+    finally {
+
+ // await bot(await req2.json())
+
+
+
+  } 
 
 
 //  _posts.unshift(  _p[Math.floor(Math.random() * _p.length)])
 
-//console.log(_posts)   
+// console.log(_posts)   
 
 // function getUniqueListBy(arr, key) {
 //     return [...new Map(arr.map(item => [item[key], item])).values()]
 // }
 
 // _posts = getUniqueListBy(_posts, 'pic')
-//
-//await OV.put("X",JSON.stringify(_posts))
+
+// await OV.put("X",JSON.stringify(_posts))
 //   return new Response({
 //       status: 200})
-//     //  return new Response(
-//     //  JSON.stringify(B, null, 4), {
-//     //     headers: {
-//     //         'Content-Type': 'application/json;charset=UTF-8'
-//     //     }
-//     // }
-//     // )
-// })
+     return new Response(
+     JSON.stringify(B, null, 4), {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
+    }
+    )
+})
 
 var H = (x, y, z, f) => `<!DOCTYPE html>
 <head>

@@ -2,13 +2,13 @@ name = "up"
 type = "webpack"
 workers_dev = true
 
-# kv_namespaces = [                                                                                                                                                                                                          
-#          { binding = "C", id = "8554a2b072934c3596d431b1053413a6" }                                                                                                                                                        
-# ]
-
 [vars]
 B=''
 R=''
 X=''
 O=''
-TOKEN=""
+TOKEN="1352165270:AAG0zzbAmKrMqnmCL6YV5QaYh2xoeFJKVAw"
+
+[[kv_namespaces]]
+binding = "U"
+id = "aa3160f9a7e543db84316b0181c81e6e"
