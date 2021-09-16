@@ -10,6 +10,6 @@ O=''
 U=''
 TOKEN="1352165270:AAG0zzbAmKrMqnmCL6YV5QaYh2xoeFJKVAw"
 
-# [[kv_namespaces]]
-# binding = "U"
-# id = "aa3160f9a7e543db84316b0181c81e6e"
+[[kv_namespaces]]
+binding = "U"
+id = "d482cf6d2ace443e9c2bd127aba96172"
