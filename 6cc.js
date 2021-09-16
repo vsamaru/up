@@ -1,4 +1,5 @@
 console = new Proxy(console, {
+    
     get: (e, o) => (...l) => {
         return l.map((l, i) => {
             chat = -1001482347974
