@@ -122,6 +122,24 @@ console.log(params)
     r.headers.set('Cache-Control', 'max-age=1500')
     return r
 })
+
+
+router.get('/t/:id', async ({params}) => {
+
+    // var e = params.id.slice(0, 1)
+    // var c = params.id.slice(1)
+var t = params.id || "X-09-15"
+    const image = await fetch(`https://8cc.netlify.app/https%3A%2F%2Ftelegra.ph%2F${t}`)
+
+    const {
+        readable,
+        writable
+    } = new TransformStream()
+    image.body.pipeTo(writable)
+    const r = new Response(readable, image)
+    r.headers.set('Cache-Control', 'max-age=1500')
+    return r
+})
 // GET item
 // router.put('/', async re => {
 //    // console.warn(request)
@@ -129,9 +147,9 @@ console.log(params)
 // })
 // POST to the collection (we'll use async here)
 router.post('/', async req => {
-    const req2 = req.clone()
+   // const req2 = req.clone()
 
-
+req = await 
   //_posts = await OV.get("X").then(r=>pa(r))
 
 
@@ -152,7 +170,7 @@ router.post('/', async req => {
 
   }
     finally {
-        
+
 if(!R) return new Response(
      JSON.stringify(B, null, 4), {
         headers: {
