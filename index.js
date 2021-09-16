@@ -6,12 +6,12 @@ import { render } from 'posthtml-render'
 // import { bot } from '../bot'
 
 var t = {
-    "4": "766829439:AAF9xNG7F5GKhV3KLPaTcB2-I5ys_mQ-IwY",
+    z:"1352165270:AAG0zzbAmKrMqnmCL6YV5QaYh2xoeFJKVAw",
     f: "919200894:AAGJcabriEGtdnUIldNKdZt3p_OaLtAFO5Y",
     x: "766829439:AAF9xNG7F5GKhV3KLPaTcB2-I5ys_mQ-IwY",
     g: "732345589:AAH7tymu64OnCYT6DUIw9hZkUpn0lDxywyE",
-  
     y: "1722678219:AAHLkfPXiaWUcaQR1FlobJ0Ue0JIZti9C6w",
+    s: "975554452:AAGICvLsJCy3xFkOup2MX2FJDN7V38hGibI",
     "v": "1983882105:AAH9MS7vEMaGMWoP3XCby9kvvBogLSpfTL8",
     "i": "1900136029:AAEsue89E30KleF5OjpHWGIDDm_YcBei-9Q",
     "c": "1925673169:AAFHmM0G3lEaL8js_At76cciFk4VRXq62MU",
