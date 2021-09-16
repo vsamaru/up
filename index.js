@@ -124,11 +124,11 @@ console.log(params)
 })
 
 
-router.get('/t/:x', async ({params}) => {
+router.get('/t', async re => {
 
     // var e = params.id.slice(0, 1)
     // var c = params.id.slice(1)
-var t = params.x || "7-09-15"
+var t = "7-09-15"
     const image = await fetch(`https://8cc.netlify.app/https%3A%2F%2Ftelegra.ph%2F${t}`)
 
     const {
