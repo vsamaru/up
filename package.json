@@ -7,7 +7,7 @@
   },
   "dependencies": {
   	"isomorphic-unfetch": "^3.1.0",
-  		"esm": "^3.2.25",
+  	"esm": "^3.2.25",
     "posthtml-render": "^3.0.0"
   }
 }
