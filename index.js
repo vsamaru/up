@@ -107,7 +107,7 @@ router.get('/x', async re => {
 //     return r
 // })
 router.get('/i/:id', async ({params}) => {
-console.log(params)
+
     var e = params.id.slice(0, 1)
     var c = params.id.slice(1)
 

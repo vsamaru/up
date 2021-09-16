@@ -1,13 +1,14 @@
 {
   "main": "index.js",
   "scripts": {
-  	"t": "nodemon -r esm test.js",
+    "t": "nodemon -r esm test.js",
     "g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
     "w": "wrangler publish"
   },
   "dependencies": {
-  	"isomorphic-unfetch": "^3.1.0",
-  	"esm": "^3.2.25",
-    "posthtml-render": "^3.0.0"
+    "esm": "^3.2.25",
+    "isomorphic-unfetch": "^3.1.0",
+    "posthtml-render": "^3.0.0",
+    "telegra.ph": "^1.0.1"
   }
 }
