@@ -56,7 +56,7 @@ router.get('/x', async re => {
 
             return 'https://api.telegram.org/file/bot' + re.query.t + '/' + r.result.file_path
         })
-
+ console.warn(re.query)
     // if (re.caption) {
     //     re.caption = re.caption.toUpperCase()
     // } else {
