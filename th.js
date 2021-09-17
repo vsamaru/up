@@ -2,51 +2,56 @@ const Telegraph = require('telegra.ph')
 const client = new Telegraph('c9835e8eb80455a0d9865fe9e3df0e1a51d902e44aab2e86653bccb3c88d')
 async function tgph(x) {
   var arr = []
- await client.getPage("9-09-16",true).then((pages) => {
-pages = pages.content
-pages.unshift( {                                                                                                                                                                                                        
-        "tag": "p",                                                                                                                                                                                          
+   await client.getPage("9-09-16",true).then((pages) => {
+
+//arr = pages.content || arr
+})
+var v = []
+  x.map( e => {
+v.push(e.pic)
+arr.push(
+{                                                                                                                                                                                                        
+         "tag": "figure",                                                                                                                                                                                      
         "children": [                                                                                                                                                                                        
             {                                                                                                                                                                                                
                 "tag": "img",                                                                                                                                                                                
                 "attrs": {                                                                                                                                                                                   
-                    "src": "https://i.ibb.co/m98tV39/i.png"                                                                                                                                           
+                    "src": e.raw                                                                                                                                          
                 }                                                                                                                                                                                            
-            },                                                                                                                                                                                               
-            {                                                                                                                                                                                                
-                "tag": "a",                                                                                                                                                                                  
-                "attrs": {                                                                                                                                                                                   
-                    "href": "https://i.ibb.co/m98tV39/i.png",                                                                                                                                         
-                    "target": "_blank"                                                                                                                                                                       
-                },                                                                                                                                                                                           
-                "children": [                                                                                                                                                                                
-                    "1234"                                                                                                                                                                                   
-                ]                                                                                                                                                                                            
-            }                                                                                                                                                                                                
+            },   
+
+        
+      // ,                                                                                                                                                                                            
+      //       {                                                                                                                                                                                                
+      //           "tag": "a",                                                                                                                                                                                  
+      //           "attrs": {                                                                                                                                                                                   
+      //               "href": e[0],                                                                                                                                         
+      //               "target": "_blank"                                                                                                                                                                       
+      //           },                                                                                                                                                                                           
+      //           "children": [                                                                                                                                                                                
+      //               e[0]                                                                                                                                                                                   
+      //           ]                                                                                                                                                                                            
+      //       }
+
         ]                                                                                                                                                                                                    
     }    )
-arr = pages
-console.warn(JSON.stringify(arr,null,4))
-//     o.unshift(rr)
+//console.warn(JSON.stringify(arr,null,4))
  })
-arr = [                                                                                                                                                                                                            
-    {                                                                                                                                                                                                        
-        "tag": "p",                                                                                                                                                                                          
-        "children": [                                                                                                                                                                                        
-                 " "                                                                                                                                                                         
-        ]                                                                                                                                                                                                    
-    }                                                                                                                                                                                                        
-]    
+//     o.unshift(rr)
+ 
+// arr = [                                                                                                                                                                                                            
+//     {                                                                                                                                                                                                        
+//         "tag": "p",                                                                                                                                                                                          
+//         "children": [                                                                                                                                                                                        
+//                  " "                                                                                                                                                                         
+//         ]                                                                                                                                                                                                    
+//     }                                                                                                                                                                                                        
+// ]    
   // x.map(e=> arr.unshift(
   //          {
   //           "tag": "p",
   //           "children": [
-  //         {
-  //           "tag": "img",
-  //           "attrs": {
-  //             "src": e
-  //           }
-  //         },
+
 
                 
   //         {
@@ -65,8 +70,24 @@ arr = [
   //     ))
 // var o 
                                                                                                                                                                                                         
-                                                                                                                                                                                                     
-        
+                   arr[0].children.push(                      {
+            "tag": "figcaption",
+            "children": [
+             v.join("\n")
+            ]
+          })                                                                                                                                                                                  
+                           arr[0].children.push(           {                                                                                                                                                                                                        
+        "tag": "figure",                                                                                                                                                                                     
+        "children": [                                                                                                                                                                                        
+            {                                                                                                                                                                                                
+                "tag": "img",                                                                                                                                                                                
+                "attrs": {                                                                                                                                                                                   
+                    "src": "https://i.ibb.co/whfQZbG/file-193.jpg"                                                                                                                                                  
+                }                                                                                                                                                                                            
+            }                                                                                                                                                                                                
+        ]                                                                                                                                                                                                    
+    })
+                           console.log(JSON.stringify(arr,null,4))
 return await client.editPage('9-09-16','9',arr, "SLOMA", "https://sloma.1i.workers.dev",true)
  .then(pages => pages.url)
       .then(pages => {

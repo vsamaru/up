@@ -14,6 +14,11 @@ esm@^3.2.25:
   resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
   integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
 
+firebase-firestore-lite@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/firebase-firestore-lite/-/firebase-firestore-lite-1.0.3.tgz#492f45eaff1e6d061d6b2af46627f911f6792960"
+  integrity sha512-mc24fSlOJMUVpMmOETxRuFVjeMOO919r7uZlc3z+Hw5wjtCB9G5JXzg3PLGBxFB0KkT7jD7DjXIjpzxklEiC0Q==
+
 iconv-lite@^0.6.2:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"

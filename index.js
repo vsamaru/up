@@ -1,5 +1,5 @@
 // import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-import './6cc'
+//import './6cc'
 import {Router} from './itty'
 // import './handler'
 import { render } from 'posthtml-render'
@@ -13,6 +13,7 @@ var t = {
     y: "1722678219:AAHLkfPXiaWUcaQR1FlobJ0Ue0JIZti9C6w",
     s: "975554452:AAGICvLsJCy3xFkOup2MX2FJDN7V38hGibI",
     "v": "1983882105:AAH9MS7vEMaGMWoP3XCby9kvvBogLSpfTL8",
+     "j": "898353069:AAGp5H7zHEdhjOjMF7oOQLU03DF3tYGFx0o",
     "i": "1900136029:AAEsue89E30KleF5OjpHWGIDDm_YcBei-9Q",
     "c": "1925673169:AAFHmM0G3lEaL8js_At76cciFk4VRXq62MU",
     "o": "706378399:AAFMlm63OEqDOU6GvLI-m1msD8fUqJ4XMkA",

@@ -2,7 +2,7 @@ var { Database } = require('firebase-firestore-lite')
 var D = new Database({ projectId: 'i----i' })
 var ref
 var List = async x => {
-    var results = await D.ref('@').query({
+    var results = await D.ref('*').query({
         // where: [
         //     ['set', '==', X.set]
         // ],
@@ -35,17 +35,17 @@ var List = async x => {
     })).reverse().slice(0, 49)
 }
 var Get = async (z,x) => {
-    if(x) return await D.ref('@/' +x).get().catch(r => { return {} }) //.then( r => r || 2)
+    if(x) return await D.ref('*/' +x).get().catch(r => { return {} }) //.then( r => r || 2)
     return await D.ref(z).get().catch(r => { return {} })
 }
 var Del = async x => {
-    return await D.ref('@/' + x).delete().catch(r => { return {} }) //.then( r => r || 2)
+    return await D.ref('*/' + x).delete().catch(r => { return {} }) //.then( r => r || 2)
 }
 var Put = async (x, z, y) => {
-    if (!z && x && x.id) return await D.ref('@/' + x.id).set(x)
+    if (!z && x && x.id) return await D.ref('*/' + x.id).set(x)
     if (z) {
         ref = await D.ref('!/' + z)
-        if (y) ref = await D.ref('@/' + z)
+        if (y) ref = await D.ref('*/' + z)
         try {
             return await ref.update(x)
         } catch (err) {
