@@ -69,14 +69,9 @@ arr.push(
         
   //     ))
 // var o 
-                                                                                                                                                                                                        
-                   arr[0].children.push(                      {
-            "tag": "figcaption",
-            "children": [
-             v.join("\n")
-            ]
-          })                                                                                                                                                                                  
-                           arr[0].children.push(           {                                                                                                                                                                                                        
+                                                                                                                                                                                                         
+                                                                                                                                                                                               
+                           arr.unshift(           {                                                                                                                                                                                                        
         "tag": "figure",                                                                                                                                                                                     
         "children": [                                                                                                                                                                                        
             {                                                                                                                                                                                                
@@ -84,10 +79,16 @@ arr.push(
                 "attrs": {                                                                                                                                                                                   
                     "src": "https://i.ibb.co/whfQZbG/file-193.jpg"                                                                                                                                                  
                 }                                                                                                                                                                                            
-            }                                                                                                                                                                                                
+            },
+            {
+            "tag": "figcaption",
+            "children": [
+             v.join("\n")
+            ]
+          }                                                                                                                                                                                                
         ]                                                                                                                                                                                                    
     })
-                           console.log(JSON.stringify(arr,null,4))
+                           //console.log(JSON.stringify(arr,null,4))
 return await client.editPage('9-09-16','9',arr, "SLOMA", "https://sloma.1i.workers.dev",true)
  .then(pages => pages.url)
       .then(pages => {

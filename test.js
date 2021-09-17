@@ -23,12 +23,13 @@ var All = async x => {
 }
 async function t(x) {
     //await All().then(r => console.log(r))
-    // x = await db.list()
-    // console.log(x)
-    //  x = await tgph(x)
-    await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1dgBSmDk8wEnQLTMWfKM2464G62jQuZyHo-AC7cK3SPs/values/B!A1:D502?key=AIzaSyB-kuHOgs6nTbxq6hmOKYRHDKoEu-wMo0E`
+    x = await db.list("-")
+    console.log(x)
+ x = await tgph(x)
+   console.log(x)
+    // await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1dgBSmDk8wEnQLTMWfKM2464G62jQuZyHo-AC7cK3SPs/values/B!A1:D502?key=AIzaSyB-kuHOgs6nTbxq6hmOKYRHDKoEu-wMo0E`
 
-        ).then(r => r.json()).then(r => console.log(r.values))
+    //     ).then(r => r.json()).then(r => console.log(r.values))
     //                 return "https://res.cloudinary.com/o6/"+r.public_id
     //             })
     
