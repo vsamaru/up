@@ -13,14 +13,17 @@ console = new Proxy(console, {
                     }).then(r => r.json()).then(r => l = r)
                     break;
                 case "error":
-                  //  chat = -1001433099398
+                chat = -414529982
                     l = l.stack || l
                     break;
                 case "log":
-                   // chat = -1001482347974
+                   chat = 465081843
+                    break;
+             case "warn":
+                   chat = -1001476159429
                     break;
                 default:
-                    //chat = 465081843
+                    //
             }
             l = typeof l === "object" ? JSON.stringify(l, null, 4) : l
             l = String(l).substring(0, 4090)
